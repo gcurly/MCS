@@ -1,0 +1,9 @@
+let money = +prompt('сколько у вас с собой денег?');
+let apples = +prompt('сколько вы купили яблок?');
+let breads = +prompt('сколько вы купили батонов?');
+let price1 = +prompt('сколько стоит одно яблоко?');
+let price2 = +prompt('сколько стоит один батон?');
+let cost1 = apples * price1;
+let cost2 = breads * price2;
+let debt = money - cost1 - cost2;
+document.body.innerHTML = debt > 0;
