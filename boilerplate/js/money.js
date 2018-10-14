@@ -1,9 +1,14 @@
-let money = +prompt('сколько у вас с собой денег?');
-let apples = +prompt('сколько вы купили яблок?');
-let breads = +prompt('сколько вы купили батонов?');
-let price1 = +prompt('сколько стоит одно яблоко?');
-let price2 = +prompt('сколько стоит один батон?');
-let cost1 = apples * price1;
-let cost2 = breads * price2;
-let debt = money - cost1 - cost2;
-document.body.innerHTML = debt > 0;
+let m = +prompt('сколько у вас с собой денег?');
+let a = +prompt('сколько вы купили яблок?');
+let b = +prompt('сколько вы купили батонов?');
+let p1 = +prompt('сколько стоит одно яблоко?');
+let p2 = +prompt('сколько стоит один батон?');
+
+function haveEnough() {
+	if (m - a*p1 - b*p2 > 0) {
+		return 'Вам хватает денег на покупки';
+	}
+	else { return 'Вам не хватает денег'};
+}
+
+document.body.innerHTML = haveEnough();
